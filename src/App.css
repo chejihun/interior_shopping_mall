@@ -283,6 +283,7 @@ a {
 /* //베스트 인기 상품 */
 .tab-area{
   width: 1280px;
+  min-width: 1280px;
   margin: auto;
 }
 .main-pro-tab{
@@ -316,15 +317,11 @@ a {
 }
 
 
-/* //테스트 침대영역 */
-.test-bed{
-  margin: auto;
-  width: 1280px;
-  min-width: 1280px;
-  text-align: left;
-}
+/* //탭 공통 영역 */
+
 .tab-product{
   height: 520px;
+  text-align: left;
 }
 .tab-img {
   border-radius: 15px;

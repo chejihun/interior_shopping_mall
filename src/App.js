@@ -6,7 +6,7 @@ import eventdata from './eventdata.js';
 import categorydata from './categorydata.js'; // 카테고리
 import tabdata from './catetebdata.js';
 import { Routes, Route, Link, useNavigate, Outlet, useParams } from 'react-router-dom';
-import bedDataList from './beddata.js';
+import shopDataList from './shopDataList.js';
 // import TabBed from './tabbed.js'
 import Test from './test.js'
 
@@ -132,17 +132,15 @@ function App() {
             <Nav variant="tabs" defaultActiveKey="link0" className="main-pro-tab">
             {/* <Nav variant="tabs"  defaultActiveKey="link0" className="main-pro-tab"> */}
                {
-                [1,2,3,4,5,6,7,8,9].map((a, i)=>{
+                categorytab.map((categoryInfo, i)=>{
                   return(
-                    <Categorytab categorytab={categorytab[i]} i={i} setTab={setTab}></Categorytab>
+                    <Categorytab i={i} setTab={setTab} type={categoryInfo.type} title={categoryInfo.title}
+                    ></Categorytab>    
                   )
                 })
               }
             </Nav>
-            <TabProduct tab={tab}>
-            
-            </TabProduct>
-
+            <TabProduct tab={tab} />
           </div>
         
 
@@ -155,7 +153,6 @@ function App() {
         {/* 오늘의 기획전      */}
         <div className="container event-area">
             <h3 className='main-event-title'>오늘의 기획전</h3>
-           
             <a href="#" className='main-envet-link'> 더보기 - </a>
             <div className="row">
               {
@@ -166,27 +163,23 @@ function App() {
                 })
               }
             </div>
-          </div>
-
-
-         
-
+        </div>
+        
         </>
-
-
         }/>
-
+        {/* // 여기까지가 네비 아래 보여지는 메인페이지 라우터 영역 */}
         
 
         <Route path="/detail" element={<div>대충 서브페이지 여기는 카테고리 중 하나 넣을 것</div>}/>
       
       </Routes>
       
-      {/* // 마지막 고정영역 푸ㅌ뤄 영역 */}
+      {/* // 마지막 고정영역 푸터 영역 */}
       {/* 네비와 푸터는 고정이기에 라우츠는 그 사이에 지정 */}
       
       <footer className='footer'>
         <div>여기가 바로 푸터다</div>
+        
       </footer>
 
 
@@ -215,12 +208,16 @@ function Blog(props){
   )
 }
 
-// 베스트 인기 상품
+// 베스트 인기 탭 메뉴 클릭 영역
 function Categorytab(props){
+  // console.log(props)
   const setTab = props.setTab 
+
   return ( 
     <Nav.Item className='tab-nav'>
-      <Nav.Link id="tab-link" classNam='tab-link' onClick={()=>{ setTab(props.i) }} eventKey={`link${props.i}` }>{ props.categorytab.title }</Nav.Link>
+      <Nav.Link id="tab-link" classNam='tab-link' onClick={()=>{ setTab(props.type) }}
+      eventKey={`link${props.i}`} type={props.type} 
+      > { props.title }</Nav.Link>
 
     </Nav.Item>
   )
@@ -230,20 +227,19 @@ function Categorytab(props){
 
 function TabProduct(props){
   // const mytip = props.mytip 
-
-  function getDataList(tab) {
-    if (tab === 0) {
-      return '탭0번데이터리스트'
-    } else if (tab === 1) {
-      return bedDataList
-    } else if (tab === 2) {
-      return 'sofaDataList'
-    }
-
-  }
-
   const tabDataList = getDataList(props.tab)
 
+  function getDataList(tabTarget) {
+    
+    return shopDataList.filter(data => {
+    return data.type === tabTarget})
+    //이 부분이 이해가 가지 않는다
+    //베스트 전체 영역은 랜덤이 아닌 고정값인데 아래는 랜덤?
+    // if {
+    //   return type === tabTarget
+    // } ???
+  }
+  
   return (
     <div className='row'>
       {tabDataList.filter((data, index) => {
@@ -255,46 +251,9 @@ function TabProduct(props){
     </div>
   )
 
- 
-  // if (props.tab === 0){
-  //    return <Test/>
-  // }
-  // if (props.tab  === 1){
-  //   const tabDataList = bedDataList
-    
-  //   return (
-  //     <div className='row'>
-  //       {tabDataList.filter((data, index) => {
-  //         return index < 8
-  //       }).map((data, index) => {
-  //         return <TabAlignItem tabbed={data} i={index}/>
-  //       })}
-  //     </div>
-  //   )
-    
-  // }
-  // if (props.tab  === 2){
-  //   return <div>소파반복문 자리</div>
-  // }
-  // if (props.tab  === 3){
-  //   return <div>수납반복문 자리</div>
-  // }
-  // if (props.tab  === 4){
-  //   return <div>조명반복문 자리</div>
-  // }
-  // if (props.tab  === 5){
-  //   return <div>패브릭반복문 자리</div>
-  // }
-  // if (props.tab  === 6){
-  //   return <div>가전반복문 자리</div>
-  // }
-  // if (props.tab  === 7){
-  //   return <div>주방반복문 자리</div>
-  // }
-  // if (props.tab  === 8){
-  //   return <div>공구반복문 자리</div>
-  // }
 }
+
+
 
 //전체 자리는 아래 제품들이 섞여 있는거일텐데 어떻게 구성할지?
 
@@ -304,16 +263,17 @@ function TabProduct(props){
 
 function TabAlignItem(props){
   return(
-    <div className="col-md-3 tab-product" >
-      <img className="tab-img" src={process.env.PUBLIC_URL + '/tabimage/bed' + (props.i+1) + '.jpg'}/>
-      <h4 className='tab-title'> { props.item.title } </h4>
-      <h5 className='tab-sale'> { props.item.sale }<span className='tab-span'>%</span> </h5>
-      <h5 className='tab-price'> { props.item.price }<span className='tab-span'>원</span> </h5>
-      <p className='tab-icon'><span className='span-icon'>특가</span></p>
-      {/* 특가는 상황에 따라 추가하는건데 어떻게 반복문 돌릴지? */}
-      <p className='tab-review-num'><span className='reivew-star'>★</span> { props.item.reviewnum}</p>
-      <p className='tab-review'>리뷰 { props.item.review}</p>
-    </div>
+      <div className="col-md-3 tab-product" >
+        {/* <img className="tab-img" src={process.env.PUBLIC_URL + '/tabimage/bed' + (props.i+1) + '.jpg'}/> */}
+        <img className="tab-img" src={ props.item.src }/>
+        <h4 className='tab-title'> { props.item.title } </h4>
+        <h5 className='tab-sale'> { props.item.sale }<span className='tab-span'>%</span> </h5>
+        <h5 className='tab-price'> { props.item.price }<span className='tab-span'>원</span> </h5>
+        <p className='tab-icon'><span className='span-icon'>특가</span></p>
+        {/* 특가는 상황에 따라 추가하는건데 어떻게 반복문 돌릴지? */}
+        <p className='tab-review-num'><span className='reivew-star'>★</span> { props.item.reviewnum}</p>
+        <p className='tab-review'>리뷰 { props.item.review}</p>
+      </div>
   )
 }
 
@@ -328,6 +288,7 @@ function Todayevent(props){
     </div>
   )
 }
+
 
 
 
