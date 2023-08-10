@@ -117,7 +117,7 @@ const shopDataList = [
         sale : 20,
         price : (310000).toLocaleString(),
         reviewnum : 4.5,
-        review : 20,
+        review : 21,
         src : 'http://localhost:3000/tabimage/bed12.jpg'
       },
       {
@@ -168,7 +168,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 21,
         src : 'http://localhost:3000/tabimage/bed17.jpg'
       },
       {
@@ -178,7 +178,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 22,
         src : 'http://localhost:3000/tabimage/sofa1.jpg'
       },
       {
@@ -188,7 +188,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 8,
         src : 'http://localhost:3000/tabimage/sofa2.jpg'
       },
       {
@@ -198,7 +198,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 41,
         src : 'http://localhost:3000/tabimage/sofa3.jpg'
       },
       {
@@ -208,7 +208,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 29,
         src : 'http://localhost:3000/tabimage/sofa4.jpg'
       },
       {
@@ -228,7 +228,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 42,
         src : 'http://localhost:3000/tabimage/sofa6.jpg'
       },
       {
@@ -238,7 +238,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 20,
         src : 'http://localhost:3000/tabimage/sofa7.jpg'
       },
       {
@@ -248,7 +248,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 18,
         src : 'http://localhost:3000/tabimage/sofa8.jpg'
       },
       {
@@ -258,7 +258,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 23,
         src : 'http://localhost:3000/tabimage/sofa9.jpg'
       },
       {
@@ -268,7 +268,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 12,
         src : 'http://localhost:3000/tabimage/sofa10.jpg'
       },
       {
@@ -278,7 +278,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 15,
         src : 'http://localhost:3000/tabimage/sofa11.jpg'
       },
       {
@@ -288,7 +288,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 15,
         src : 'http://localhost:3000/tabimage/sofa12.jpg'
       },
       {
@@ -298,7 +298,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 17,
         src : 'http://localhost:3000/tabimage/arr1.jpg'
       },
       {
@@ -308,20 +308,20 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 20,
         src : 'http://localhost:3000/tabimage/arr2.jpg'
       },
       //중복발생 - all로 대처
-      {
-        id : 31,
-        type : 'all',
-        title : "오르후 LED조명 65T 평상형침대(매트제외)",
-        sale : 32,
-        price : (180000).toLocaleString(),
-        reviewnum : 4.5,
-        review : 31,
-        src : 'http://localhost:3000/tabimage/arr2.jpg'
-      },
+      // {
+      //   id : 31,
+      //   type : 'all',
+      //   title : "오르후 LED조명 65T 평상형침대(매트제외)",
+      //   sale : 32,
+      //   price : (180000).toLocaleString(),
+      //   reviewnum : 4.5,
+      //   review : 31,
+      //   src : 'http://localhost:3000/tabimage/arr2.jpg'
+      // },
       {
         id : 32,
         type : 'arr',
@@ -339,7 +339,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 34,
         src : 'http://localhost:3000/tabimage/arr4.jpg'
       },
       {
@@ -349,7 +349,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 16,
         src : 'http://localhost:3000/tabimage/arr5.jpg'
       },
       {
@@ -359,7 +359,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 15,
         src : 'http://localhost:3000/tabimage/arr6.jpg'
       },
       {
@@ -369,7 +369,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 18,
         src : 'http://localhost:3000/tabimage/arr7.jpg'
       },
       {
@@ -379,7 +379,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 30,
         src : 'http://localhost:3000/tabimage/arr8.jpg'
       },
       {
@@ -389,7 +389,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 29,
         src : 'http://localhost:3000/tabimage/arr9.jpg'
       },
       {
@@ -399,7 +399,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 28,
         src : 'http://localhost:3000/tabimage/arr10.jpg'
       },
       {
@@ -409,20 +409,20 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 17,
         src : 'http://localhost:3000/tabimage/arr11.jpg'
       },
-      //여기 중복 또발생 -all로 대처
-      {
-        id : 41,
-        type : 'all',
-        title : "오르후 LED조명 65T 평상형침대(매트제외)",
-        sale : 32,
-        price : (180000).toLocaleString(),
-        reviewnum : 4.5,
-        review : 31,
-        src : 'http://localhost:3000/tabimage/arr5.jpg'
-      },
+      // //여기 중복 또발생 -all로 대처
+      // {
+      //   id : 41,
+      //   type : 'all',
+      //   title : "오르후 LED조명 65T 평상형침대(매트제외)",
+      //   sale : 32,
+      //   price : (180000).toLocaleString(),
+      //   reviewnum : 4.5,
+      //   review : 9,
+      //   src : 'http://localhost:3000/tabimage/arr5.jpg'
+      // },
       {
         id : 42,
         type : 'digital',
@@ -430,7 +430,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 11,
         src : 'http://localhost:3000/tabimage/digital1.jpg'
       },
       {
@@ -440,7 +440,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 12,
         src : 'http://localhost:3000/tabimage/digital2.jpg'
       },
       {
@@ -450,7 +450,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 19,
         src : 'http://localhost:3000/tabimage/digital3.jpg'
       },
       {
@@ -460,7 +460,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 20,
         src : 'http://localhost:3000/tabimage/digital4.jpg'
       },
       {
@@ -470,7 +470,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 22,
         src : 'http://localhost:3000/tabimage/digital5.jpg'
       },
       {
@@ -490,7 +490,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 21,
         src : 'http://localhost:3000/tabimage/digital7.jpg'
       },
       {
@@ -500,7 +500,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 20,
         src : 'http://localhost:3000/tabimage/digital8.jpg'
       },
       {
@@ -510,7 +510,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 22,
         src : 'http://localhost:3000/tabimage/digital9.jpg'
       },
       {
@@ -520,7 +520,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 29,
         src : 'http://localhost:3000/tabimage/digital10.jpg'
       },
       {
@@ -530,7 +530,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 35,
         src : 'http://localhost:3000/tabimage/digital11.jpg'
       },
       {
@@ -540,7 +540,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 19,
         src : 'http://localhost:3000/tabimage/digital12.jpg'
       },
       {
@@ -550,7 +550,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 19,
         src : 'http://localhost:3000/tabimage/diy1.jpg'
       },
       {
@@ -560,7 +560,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 29,
         src : 'http://localhost:3000/tabimage/diy2.jpg'
       },
       {
@@ -570,7 +570,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 36,
         src : 'http://localhost:3000/tabimage/diy3.jpg'
       },
       {
@@ -580,7 +580,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 28,
         src : 'http://localhost:3000/tabimage/diy4.jpg'
       },
       {
@@ -590,7 +590,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 41,
         src : 'http://localhost:3000/tabimage/diy5.jpg'
       },
       {
@@ -600,7 +600,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 40,
         src : 'http://localhost:3000/tabimage/diy6.jpg'
       },
       {
@@ -610,7 +610,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 22,
         src : 'http://localhost:3000/tabimage/diy7.jpg'
       },
       {
@@ -630,7 +630,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 38,
         src : 'http://localhost:3000/tabimage/diy9.jpg'
       },
       {
@@ -650,7 +650,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 37,
         src : 'http://localhost:3000/tabimage/diy11.jpg'
       },
       {
@@ -660,7 +660,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 41,
         src : 'http://localhost:3000/tabimage/diy12.jpg'
       },
       {
@@ -670,7 +670,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 45,
         src : 'http://localhost:3000/tabimage/fabric1.jpg'
       },
       {
@@ -680,7 +680,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 29,
         src : 'http://localhost:3000/tabimage/fabric2.jpg'
       },
       {
@@ -690,7 +690,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 30,
         src : 'http://localhost:3000/tabimage/fabric3.jpg'
       },
       {
@@ -700,7 +700,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 33,
         src : 'http://localhost:3000/tabimage/fabric4.jpg'
       },
       {
@@ -710,7 +710,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 35,
         src : 'http://localhost:3000/tabimage/fabric5.jpg'
       },
       {
@@ -720,7 +720,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 42,
         src : 'http://localhost:3000/tabimage/fabric6.jpg'
       },
       {
@@ -730,7 +730,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 51,
         src : 'http://localhost:3000/tabimage/fabric7.jpg'
       },
       {
@@ -740,7 +740,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 57,
         src : 'http://localhost:3000/tabimage/fabric8.jpg'
       },
       {
@@ -760,7 +760,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 20,
         src : 'http://localhost:3000/tabimage/fabric10.jpg'
       },
       {
@@ -780,7 +780,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 30,
         src : 'http://localhost:3000/tabimage/fabric12.jpg'
       },
       {
@@ -790,7 +790,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 30,
         src : 'http://localhost:3000/tabimage/kitchen1.jpg'
       },
       {
@@ -800,7 +800,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 35,
         src : 'http://localhost:3000/tabimage/kitchen2.jpg'
       },
       {
@@ -820,7 +820,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 17,
         src : 'http://localhost:3000/tabimage/kitchen4.jpg'
       },
       {
@@ -830,7 +830,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 36,
         src : 'http://localhost:3000/tabimage/kitchen5.jpg'
       },
       {
@@ -840,7 +840,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 43,
         src : 'http://localhost:3000/tabimage/kitchen6.jpg'
       },
       {
@@ -850,7 +850,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 28,
         src : 'http://localhost:3000/tabimage/kitchen7.jpg'
       },
       {
@@ -860,7 +860,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 19,
         src : 'http://localhost:3000/tabimage/kitchen8.jpg'
       },
       {
@@ -870,7 +870,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 22,
         src : 'http://localhost:3000/tabimage/kitchen9.jpg'
       },
       {
@@ -880,7 +880,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 27,
         src : 'http://localhost:3000/tabimage/kitchen10.jpg'
       },
       {
@@ -890,7 +890,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 22,
         src : 'http://localhost:3000/tabimage/kitchen11.jpg'
       },
       {
@@ -900,7 +900,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 30,
         src : 'http://localhost:3000/tabimage/kitchen12.jpg'
       },
       {
@@ -920,7 +920,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 30,
         src : 'http://localhost:3000/tabimage/light2.jpg'
       },
       {
@@ -930,7 +930,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 15,
         src : 'http://localhost:3000/tabimage/light3.jpg'
       },
       {
@@ -950,7 +950,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 26,
         src : 'http://localhost:3000/tabimage/light5.jpg'
       },
       {
@@ -960,7 +960,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 30,
         src : 'http://localhost:3000/tabimage/light6.jpg'
       },
       {
@@ -970,7 +970,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 12,
         src : 'http://localhost:3000/tabimage/light7.jpg'
       },
       {
@@ -980,7 +980,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 36,
         src : 'http://localhost:3000/tabimage/light8.jpg'
       },
       {
@@ -1000,7 +1000,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 35,
         src : 'http://localhost:3000/tabimage/light10.jpg'
       },
       {
@@ -1010,7 +1010,7 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 40,
         src : 'http://localhost:3000/tabimage/light10.jpg'
       },
       {
@@ -1030,10 +1030,10 @@ const shopDataList = [
         sale : 32,
         price : (180000).toLocaleString(),
         reviewnum : 4.5,
-        review : 31,
+        review : 32,
         src : 'http://localhost:3000/tabimage/light12.jpg'
       },
-      //여기부터 6개는 all 
+      // 여기부터 6개는 all 
       {
         id : 103,
         type : 'all',

@@ -1,6 +1,6 @@
 import { clear } from '@testing-library/user-event/dist/clear';
 import { Navbar, Container, Nav, Button, Form  } from 'react-bootstrap';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import blogdata from './mytipdata.js';
 import eventdata from './eventdata.js';
 import categorydata from './categorydata.js'; // 카테고리
@@ -19,7 +19,7 @@ function App() {
   let [category] = useState(categorydata)
   let [categorytab] = useState(tabdata)
   let navigate = useNavigate();
-  const [tab, setTab] = useState(0)
+  const [tab, setTab] = useState(0);
 
 
 
@@ -140,7 +140,7 @@ function App() {
                 })
               }
             </Nav>
-            <TabProduct tab={tab} />
+            <TabProduct tab={tab}  />
           </div>
         
 
@@ -178,7 +178,28 @@ function App() {
       {/* 네비와 푸터는 고정이기에 라우츠는 그 사이에 지정 */}
       
       <footer className='footer'>
-        <div>여기가 바로 푸터다</div>
+        <div className='foot'>
+          <div className='foot1'>
+            <h5>LOGO INTERIOR</h5>
+            <p>이용약관</p>
+            <p>개인정보처리방침</p>
+            <p>사업자정보확인</p>
+          </div>
+          <div className='foot2'>
+            <h5>고객센터</h5>
+            <h3>1234-5678</h3>
+            <p>월-금 09:00 - 18:00 | 점심시간 12:00 - 13:00</p>
+            <p>평일 : 전체문의 상담가능</p>
+            <p>주말, 공휴일 : 휴무</p>
+          </div>
+          <div className='foot3'>
+            <h5>Info</h5>
+            <p><span></span> 경기도 성남시 둔촌대로 363</p>
+            <p><span></span> jas8157@naver.com</p>
+            <p><span></span> 010-1234-5678</p>
+            <p><span></span> 031-123-4567</p>
+          </div>
+        </div>
         
       </footer>
 
@@ -225,21 +246,35 @@ function Categorytab(props){
 
 
 
+//탭 큰데이터 영역
 function TabProduct(props){
-  // const mytip = props.mytip 
+   
   const tabDataList = getDataList(props.tab)
+  const productList = shopDataList;
 
-  function getDataList(tabTarget) {
+  //여기서 데이터 리스트를 타입별로 불러오고
+  function getDataList(tabTarget){
     
     return shopDataList.filter(data => {
     return data.type === tabTarget})
-    //이 부분이 이해가 가지 않는다
-    //베스트 전체 영역은 랜덤이 아닌 고정값인데 아래는 랜덤?
-    // if {
-    //   return type === tabTarget
-    // } ???
   }
-  
+ 
+  // 여기서 불러온 타입을 리뷰순으로 정리하고
+  function reviewProduct(productList, type){
+    let filterProduct = productList;
+    
+    if  (type && type !== 'all'){
+      filterProduct = productList.filter((product) => product.type === type);
+    } 
+    const sortedProducts = filterProduct.sort((a, b) => b.review - a.review);
+    const topProduct = sortedProducts.slice(0, 8);
+    
+    return topProduct;
+  }
+  console.log(reviewProduct(productList, 'all'))
+  // 그렇다면 여기서 문제! all이라는 type은 없는데? 
+
+  // 여기서 정리된 아이템을 8개만 보여준다는거 아닌가?
   return (
     <div className='row'>
       {tabDataList.filter((data, index) => {
@@ -247,10 +282,10 @@ function TabProduct(props){
         return index < viewLimit
       }).map((item, index) => {
         return <TabAlignItem item={item} i={index}/>
-      })}
+      }) 
+      }
     </div>
   )
-
 }
 
 
