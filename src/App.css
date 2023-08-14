@@ -1,13 +1,21 @@
 /* //시작 공통 속성값 */
-a {
-  text-decoration-line: none;
-  color: #000;
-}
-
 
 .App {
   text-align: center;
 }
+a {
+  text-decoration-line: none;
+  color: #000;
+}
+a, p, h1, h2, h3, h4, h5 {
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-family: 'S-CoreDream-3Light';
+} 
+
+
+
+
+
 /* 네비게이션 백그라운드 영역 */
 .back-div{
   width: 100%;
@@ -72,7 +80,7 @@ a {
   display: inline-block;
   margin-right: 25px;
   color : #dbdbdb;
-  font-size: 12px;
+  font-size: 13px;
   padding-top: 10px;
   float: left;
 }
@@ -86,9 +94,9 @@ a {
   color : #fff;
 }
 .nav-logo {
-  font-size: 24px;
-  letter-spacing: 1px;
-  font-weight: bold;
+  font-size: 25px;
+
+  font-weight: 900;
 }
 .nav-logo:hover{
   color: white;
@@ -96,8 +104,8 @@ a {
 /* // 세번째 영역 */
 .nav-tab-title1{
   margin-right: 50px;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   padding-top: 13px;
 }
 .nav-tab-title1:last-child{
@@ -153,6 +161,7 @@ a {
 }
 .ban-container{
   position: absolute;
+  background-color: #f98200;
   width: 100%;
   left: 0;
   top: 0;
@@ -164,11 +173,8 @@ a {
   float: left;
   width: 900px;
   height: 460px;
+  background-color: bisque;
 }
-.slide-banner:not(:last-child){
-  margin-right: 30px;
-}
-
 .slide-banner:first-child{
   background-color: aqua;
 }
@@ -216,9 +222,9 @@ a {
   border-bottom: 3px solid #2a3e49;
 }
 .cate-teb-link > p {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
-  padding-top: 15px;
+  padding-top: 17px;
 }
 
 
@@ -235,12 +241,12 @@ a {
 .main-bl-title, .main-cate-title, .main-tab-title, .main-event-title{
   margin-top: 100px;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .sub-bl-title{
   margin: 15px 0 33px 0 ;
-  font-size: 14px;
+  font-size: 15px;
 }
 .main-bl-link {
   position: absolute;
@@ -269,7 +275,7 @@ a {
 .blog-title {
   padding-top: 35px;
   font-size: 19px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .blog-content, .blog-link{
   font-size: 14px;
@@ -344,6 +350,7 @@ a {
 .tab-sale {
   padding: 0 7px 0 10px;
   color: #f98200;
+  font-weight: 700;
 }
 .tab-span{
   font-size: 15px;
@@ -412,13 +419,13 @@ a {
   border-radius: 10px;
 }
 .event-title {
-  padding: 20px 0 0 10px;
+  padding: 20px 0 0 20px;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 600;
   text-align: left;
 }
 .event-content {
-  padding: 5px 0 0 10px;
+  padding: 5px 0 0 20px;
   font-size: 14px;
   font-weight: 600;
   text-align: left;
