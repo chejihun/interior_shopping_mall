@@ -16,8 +16,8 @@ function CategoryProductSerch() {
                   )
                 })
               } */}
-              {categoryProductArray.map(i => (
-                <Category category={categorySerchData[i]} i={i} key={i} />
+              {categorySerchData.map((category, i) => (
+                <Category key={i} category={category} i={i} />
               ))}
             </div>
           </div>

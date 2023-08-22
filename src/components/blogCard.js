@@ -1,9 +1,9 @@
 import blogCardData from "../blogCardData"
+import { Routes, Route, Link, useNavigate, Outlet, useParams } from 'react-router-dom';
 
 function BlogCard(){
 
-    // const blogCardArray = Array.from({ length: 3 }, (_, i) => i);
-    
+  const navigate = useNavigate();
 
     return (
         <div className="container tip-area">
@@ -18,14 +18,11 @@ function BlogCard(){
               )
             })
           } */}
-          {/* {
-            blogCardArray.map(i => (
-            <BlogCardForm mytip={blogCardData[i]} i={i} key={i} />
-          ))} */}
+         
           {
-            blogCardList.map((a, i) => {
-            return <BlogCardForm blogCardInfo={blogCardData[i]} i={i} a={a.date}/>
-          }) 
+          blogCardList.map((blogCardInfo, i) => (
+            <BlogCardForm key={i} blogCardInfo={blogCardInfo} i={i} onClick={() => { navigate('/') }} />
+          ))
           }
         </div>
       </div>

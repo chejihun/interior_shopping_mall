@@ -1,13 +1,14 @@
 
 import { Navbar, Container, Nav, Button, Form  } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
+import { Routes, Route, Link, useNavigate, Outlet, useParams } from 'react-router-dom';
 import shopDataList from '../shopDataList.js';
 import HomeBestTab from '../HomeBestTab.js';
 
 function HomeBestProductTab() {
     let [categoryTab] = useState(HomeBestTab)
     const [tab, setTab] = useState('all');
-
+    const navigate = useNavigate();
 
     return(
         <div className='tab-area'>
@@ -76,7 +77,7 @@ function HomeBestProductTab() {
         return (
           <div className='row'>
             {bestDataList.map((item, index) => {
-              return <TabAlignItem item={item} i={index}/>
+              return <TabAlignItem item={item} i={index} onClick={()=>{ navigate('/detail') }}/>
             }) 
             }
           </div>
@@ -86,7 +87,7 @@ function HomeBestProductTab() {
       
       function TabAlignItem(props){
         return(
-            <div className="col-md-3 tab-product" >
+            <Nav.Link className="col-md-3 tab-product" onClick={()=>{ navigate('/detail') }} >
               {/* <img className="tab-img" src={process.env.PUBLIC_URL + '/tabimage/bed' + (props.i+1) + '.jpg'}/> */}
               <img className="tab-img" src={ props.item.src }/>
               <h4 className='tab-title'> { props.item.title } </h4>
@@ -96,7 +97,7 @@ function HomeBestProductTab() {
               {/* 특가는 상황에 따라 추가하는건데 어떻게 반복문 돌릴지? */}
               <p className='tab-review-num'><span className='reivew-star'>★</span> { props.item.reviewnum}</p>
               <p className='tab-review'>리뷰 { props.item.review}</p>
-            </div>
+            </Nav.Link>
         )
       }
 }

@@ -11,12 +11,13 @@ import HomeBottomBanner from './components/HomeBottomBanner.js';
 import HomeTodayEvent from './components/ToadyEvent.js';
 import HomeBestProductTab from './components/HomeBestProduct.js';
 import CategoryProductSerch from './components/CatagoryProductSerch.js';
-
-
+import ProductDetailPage from './productpages/productDetailPage';
+import shopDataList from './shopDataList';
+import Cart from './components/Cart.js'
 
 function App() {
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="App">
@@ -48,7 +49,7 @@ function App() {
         <div className='nav_div4'>
           <Nav.Link href="#" className='nav-tab-icon tab-icon1'></Nav.Link>
           <Nav.Link href="#" className='nav-tab-icon tab-icon2'></Nav.Link>
-          <Nav.Link href="#" className='nav-tab-icon tab-icon3'></Nav.Link>
+          <Nav.Link onClick={()=>{ navigate('/cart') }} className='nav-tab-icon tab-icon3'></Nav.Link>
         </div>
         <div className='div3-line'></div>
         <p></p>
@@ -64,7 +65,7 @@ function App() {
         <>   
 
           {/* // 슬라이드 영역 */}
-          <SlideBanner/>
+          {/* <SlideBanner/> */}
           {/* //슬라이드배너의 버튼 */}
           <div className='ban-btn-area'>
             <button className='ban-btn'></button>
@@ -80,7 +81,7 @@ function App() {
 
 
         {/* //나만의 인테리어 꿀팁 영역 */}
-        <BlogCard />
+        <BlogCard/>
 
 
         {/* //카테고리별 베스트인기 상품 8개보여주기 */}
@@ -100,7 +101,10 @@ function App() {
         {/* // 여기까지가 네비 아래 보여지는 메인페이지 라우터 영역 */}
         
 
-        <Route path="/detail" element={<div>대충 서브페이지 여기는 카테고리 중 하나 넣을 것</div>}/>
+        <Route path="/detail" element={ <ProductDetailPage/> }/>
+        <Route path="/cart" element={ <Cart/> }/>
+        {/* 제품 카테고리별 타입을 눌렀을 때 나오는 목록을 나눌수 있나? */}
+        {/* // 예를들면 침대 카테고리를 누르며 침대만 나오게 또한 제품들이 섞여있을때도 타입 id로 구분 될 수 있는지? */}
       
       </Routes>
       
@@ -129,8 +133,9 @@ function App() {
             <p><span></span> 010-1234-5678</p>
             <p><span></span> 031-123-4567</p>
           </div>
+          
         </div>
-        
+        <div className='clear'></div>
       </footer>
 
 
