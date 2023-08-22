@@ -18,7 +18,6 @@ const shopDataList = [
         title : "빈 아쿠아텍스 패브릭 평상형 호텔 침대프레임",
         content: "나무가 달라야 색도 다르다! 부드러운 느낌을 주는 고무나무 사용",
         consumer : (999999).toLocaleString(),
-        consumer : (200000).toLocaleString(),
         sale : 50,
         price : (110000).toLocaleString(),
         reviewnum : 4.2,
@@ -1238,13 +1237,6 @@ const shopDataList = [
         review : 32,
         src : 'http://localhost:3000/tabimage/light13.jpg'
       }
-      
-
-
-
-
-
-
   ]          
 
   
