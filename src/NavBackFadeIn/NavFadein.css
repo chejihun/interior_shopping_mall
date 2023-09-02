@@ -1,0 +1,15 @@
+.showback-div {
+  transition: background-color 0.3s ease;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 90;
+  top: 0px;
+}  
+.showback-fadein {
+  background-color: #fff;
+  opacity: 0.9;
+  width: 100%;
+  height: 73px;
+}
+  

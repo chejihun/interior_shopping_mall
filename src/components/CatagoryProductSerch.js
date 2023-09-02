@@ -1,37 +1,37 @@
-import categorySerchData from "../categorySerchData.js"; 
+import { Routes, Route, Link, useNavigate, Outlet, useParams } from 'react-router-dom';
+import { useQuery } from 'react-query';
+import { fetchGetCategorySearchItems } from '../api/categorySearch.js';
 
 function CategoryProductSerch() {
-
-  // 1. 카데고리 개수를 length를 이용하여 보여질 최대 개수를 지정
-  const categoryProductArray = Array.from({ length: 8 }, (_, i) => i);
+  const navigate = useNavigate();
+  const { data: categorySearchItems, error, isLoading } = useQuery('getCategorySearchItems', fetchGetCategorySearchItems);
     
   return (
-        <div className='main-cate'>
-            <h3 className='main-cate-title'>카테고리별 상품 찾기</h3>
-            <div className="cate-teb">
-              {/* {
-                [1,2,3,4,5,6,7,8].map((a, i)=>{
-                  return(
-                    <Category category={categorySerchData[i]} i={i}></Category>
-                  )
-                })
-              } */}
-              {categorySerchData.map((category, i) => (
-                <Category key={i} category={category} i={i} />
-              ))}
-            </div>
-          </div>
-    )
+    <div className='main-cate'>
+      <h3 className='main-cate-title'>카테고리별 상품 찾기</h3>
+      <div className="cate-teb">
+        {isLoading ? (
+          <p>이미지 불러오는 중.</p>
+        ) : categorySearchItems ? (
+          categorySearchItems.map((category, i) => (
+            <Category key={i} category={category} onClick={() => { navigate('/') }} />
+          ))
+          ) : (
+            <p>이미지를 불러오는데 실패하였습니다.</p>
+          )}
+      </div>
+    </div>
+  )
 }
-function Category(props){
-  // const Category = Hom
-    return (
-        <a href="#" className='cate-teb-link'>
-          <img className="cate-img" src={process.env.PUBLIC_URL + '/categoryimage/category' + (props.i+1) + '.png'}/>
-          <p className='cate-title'> { props.category.title } </p>
-        </a>
-    )
-  }
+
+function Category( {category} ) {
+  return (
+    <a href="#" className='cate-teb-link'>
+      <img className="cate-img" src={ category.src }/>
+      <p className='cate-title'> { category.title } </p>
+    </a>
+  )
+}
 
 
 export default CategoryProductSerch;
